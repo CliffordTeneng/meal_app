@@ -9,12 +9,12 @@ class CategoriesScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("DeliMeal"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(right:8.0, left: 8),
-        child: GridView(
+      body: GridView(
+        padding: EdgeInsets.all(10),
         children: DUMMY_CATEGORIES
             .map(
               (catData) => CategoryItem(
+                catData.id,
                 catData.title,
                 catData.color,
               ),
@@ -27,7 +27,6 @@ class CategoriesScreen extends StatelessWidget {
           mainAxisSpacing: 20,
         ),
     ),
-      ),
     );
   }
 }
